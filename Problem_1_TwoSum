@@ -1,0 +1,9 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        table={}
+        for i,n in enumerate(nums):
+            key=target-n
+            if key in table:
+                return [table[key],i]
+            table[n]=i
+        return 0
