@@ -1,0 +1,9 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        hashtable={}
+        for index,key in enumerate(nums):
+            if key in hashtable:
+                return True
+            hashtable[key]=index
+        return False
+        
